@@ -1,0 +1,53 @@
+.TH _PRINTF(3) "12 July 2022" "HOLBERTON SCHOOL" "_PRINTF"
+.SH NAME
+.B _printf - prints the format and the data conversion
+
+.SH SYNOPSIS
+.SY
+.B #include "main.h"
+.B int _printf(const char *
+.I format,
+.B ...)
+.YS
+.SH DESCRIPTION
+.B _printf
+.B The _printf function is a function that prints an output correspondent to it's format.
+.BThis format will use arguments and access variables, to convert into an output.
+
+.SH Format controls with a % followed by these characters:
+.TP
+.B %% - specifies a single percent sign (%).
+.TP
+.B %c - specifies a single character.
+.TP
+.B %d - specifies a decimal number base 10.
+.TP
+.B %s - specifies a single string.
+.TP
+.B %i - specifies an integer
+
+.SH RETURN VALUE
+When return sucessful, these functions return the number of
+characters printed. Hence,excluding the null byte used to end output to
+strings.
+
+.SH BUGS
+  No bugs.
+
+.SH EXAMPLEs
+.B To be able to print the day of a birthday. Month and weekday are pointers for the string  day and year. Day and year will be your integers:
+
+.B #include "main.h"
+
+_printf("%s, %s %d, $d\\n", weekday, month, day, year);
+
+.SH SEE ALSO
+.I printf(3)
+.SH BUGS
+None detected bugs.
+
+.SH Authors
+.B Griseliz Ramos & Raymond Colon
+
+.SH COLOPHON
+.B This project was release on 2022 in Holberton School San Juan, Puerto Rico.
