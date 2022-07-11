@@ -15,10 +15,11 @@ int (*matchf(const char sp))(va_list args)
 	fs fmt[] = {
 	{'c', _printc},
 	{'s', _putstr},
+	{'%', _printpc},
 	{'\0', NULL}
 	};
 
-	for (i = 0; i < 3; i++)
+	for (i = 0; i < 4; i++)
 	{
 		if (sp == fmt[i].spec)
 		{

@@ -17,23 +17,27 @@ int _printf(const char *const format, ...)
 	int (*func)(va_list);
 
 	va_start(args, format);
-
 	if (format)
 	{
 		for (i = 0; format[i] != '\0'; i++)
 		{
 			if (format[i] == '%')
 			{
-				if (format[i + 1] == '%')
+				if (!(format[i + 1]))
 				{
-					_putchar('%');
-					count++;
+					return (-1);
 				}
 				func = matchf(format[i + 1]);
 				if (func)
 				{
 					count += func(args);
 					i++;
+					continue;
+				}
+				else
+				{
+					_putchar(format[i]);
+					count++;
 					continue;
 				}
 			}

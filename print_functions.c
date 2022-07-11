@@ -39,3 +39,14 @@ int _printc(va_list args)
 	return (_putchar(c));
 }
 
+/**
+ * _printpc - prints percent sign
+ * @args: arguments
+ * Return: 1
+ */
+
+int _printpc(__attribute__((unused)) va_list args)
+{
+	_putchar('%');
+return (1);
+}

@@ -28,6 +28,7 @@ int _putstr(va_list args);
 
 int _printc(va_list args);
 
+int _printpc(__attribute__((unused)) va_list args);
 
 int _strlen(char *s);
 
