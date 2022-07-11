@@ -24,23 +24,23 @@ int _printf(const char *const format, ...)
 		{
 			if (format[i] == '%')
 			{
-				i++;
-				func = matchf(format[i]);
+				if (format[i + 1] == '%')
+				{
+					_putchar('%');
+					count++;
+				}
+				func = matchf(format[i + 1]);
 				if (func)
 				{
 					count += func(args);
-				}
-				else
-				{
-					_putchar(format[i - 1]);
-					_putchar(format[i]);
+					i++;
 					continue;
 				}
 			}
 			else
 			{
-				_putchar(format[i]);
-				count++;
+			_putchar(format[i]);
+			count++;
 			}
 		}
 		return (count);
