@@ -34,11 +34,10 @@ int _printf(const char *const format, ...)
 				{
 					_putchar(format[i - 1]);
 					_putchar(format[i]);
-					count++;
-					flag = 1;
+					continue;
 				}
 			}
-			else if (flag != 1)
+			else
 			{
 				_putchar(format[i]);
 				count++;
