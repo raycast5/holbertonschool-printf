@@ -1,12 +1,13 @@
 #include <stdio.h>
 #include "main.h"
+#include <stddef.h>
 #include <stdarg.h>
 #include <stdlib.h>
 
 int _printf(const char *const format, ...)
 {
 	va_list args;
-	int i, count = 0, flag = 0;
+	int i, count = 0;
 	int (*func)(va_list);
 	
 	va_start(args, format);
