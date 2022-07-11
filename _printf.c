@@ -4,15 +4,21 @@
 #include <stdarg.h>
 #include <stdlib.h>
 
+/**
+ * _printf - prints formatted to output
+ * @format: format of arguments
+ * Return: number of characters printed
+ */
+
 int _printf(const char *const format, ...)
 {
 	va_list args;
 	int i, count = 0;
 	int (*func)(va_list);
-	
+
 	va_start(args, format);
-	
-	if(format)
+
+	if (format)
 	{
 		for (i = 0; format[i] != '\0'; i++)
 		{
@@ -36,7 +42,8 @@ int _printf(const char *const format, ...)
 				count++;
 			}
 		}
+		return (count);
 	}
 va_end(args);
-return(count);
+return (-1);
 }
