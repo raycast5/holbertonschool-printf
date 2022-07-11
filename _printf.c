@@ -13,7 +13,7 @@
 int _printf(const char *const format, ...)
 {
 	va_list args;
-	int i, count = 0;
+	int i, count = 0, flag;
 	int (*func)(va_list);
 
 	va_start(args, format);
@@ -33,15 +33,17 @@ int _printf(const char *const format, ...)
 				else
 				{
 					_putchar(format[i - 1]);
+					_putchar(format[i]);
 					count++;
-					continue;
+					flag = 1;
 				}
 			}
-			else
+			else if (flag != 1)
 			{
 				_putchar(format[i]);
 				count++;
 			}
+			flag = 0;
 		}
 		return (count);
 	}
