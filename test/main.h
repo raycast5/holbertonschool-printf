@@ -3,12 +3,6 @@
 
 #include <stdarg.h>
 
-/**
- * struct formats - struct for format matching
- * @spec: format specifiers
- * @f: function
- */
-
 
 typedef struct formats
 {

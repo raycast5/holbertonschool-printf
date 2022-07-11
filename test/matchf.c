@@ -1,12 +1,7 @@
+#include <stdio.h>
 #include "main.h"
 #include <stdarg.h>
-
-/**
- * matchf - matches specifiers with functions
- * @sp: format specifiers
- * Return: appropriate function, NULL if no match
- */
-
+#include <stdlib.h>
 
 int (*matchf(const char sp))(va_list args)
 {
@@ -21,7 +16,7 @@ int (*matchf(const char sp))(va_list args)
 	{
 		if (sp == fmt[i].spec)
 		{
-			return (fmt[i].f);
+			return(fmt[i].f);
 		}
 	}
 return (NULL);

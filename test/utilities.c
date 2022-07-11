@@ -3,13 +3,6 @@
 #include <stdarg.h>
 #include <stdlib.h>
 
-/**
- * _strcmp - compares two strings.
- * @s1: string 1.
- * @s2: string 2.
- * Return: result
- */
-
 int _strcmp(char *s1, char *s2)
 {
 	int i;
@@ -26,12 +19,6 @@ int _strcmp(char *s1, char *s2)
 	return (res);
 }
 
-/**
- * _strlen - counts length of strings.
- * @s: string
- * Return: result
- */
-
 int _strlen(char *s)
 {
 	int i;
@@ -42,14 +29,8 @@ int _strlen(char *s)
 return (i);
 }
 
-/**
- * _putchar - prints a char
- * @c: a char
- * Return: char
- */
-
 int _putchar(char c)
 {
-	return (write(1, &c, 1));
+	return(write(1, &c, 1));
 }
 
