@@ -25,11 +25,11 @@ This format will use arguments and access variables, to convert into an output. 
     va_copy (man 3 va_copy)
     va_arg (man 3 va_arg)
     
-<h1> Mandatory Tasks 📋:</h1>
+<h1> Mandatory Tasks 📋 </h1>
 <ul>- Write a function that produces output according to a format for conversion specifiers <code>c</code> <code>s</code> <code>%</code>. </ul>
 <ul>- Manage the conversion specifiers. <code>d</code> <code>i</code> </ul>
 <ul>- Create a man page for your function.</ul>
-<h1> Files 🗃️:</h1>
+<h1> Files 🗃️ </h1>
 <li>_printf.c: custom printf
 <li>_putchar.c: writes a character to output.
 <li> man_3_printf:<//li> custom manual printf
