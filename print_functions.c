@@ -12,13 +12,17 @@
 int _putstr(va_list args)
 {
 	int i, len;
-	char *str = va_arg(args, char *);
+	char *str;
 
 	if (!args)
 	{
 		str = "(null)";
 	}
-	len = _strlen(str);
+	else
+	{
+		str = va_arg(args, char *);
+		len = _strlen(str);
+	}
 	for (i = 0; str[i] != '\0'; i++)
 	{
 		_putchar(str[i]);
