@@ -22,7 +22,7 @@ int _printf(const char *const format, ...)
 	{
 		for (i = 0; format[i] != '\0'; i++)
 		{
-			if (format[i] == '%' && format[i + 1] != '%')
+			if (format[i] == '%' || format[i + 1] != '%')
 			{
 				i++;
 				func = matchf(format[i]);
