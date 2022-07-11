@@ -33,8 +33,7 @@ int _printf(const char *const format, ...)
 				else
 				{
 					_putchar(format[i - 1]);
-					_putchar(format[i]);
-					count += 2;
+					count ++;
 				}
 			}
 			else
