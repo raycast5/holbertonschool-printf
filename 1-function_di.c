@@ -15,6 +15,5 @@ int print_i(va_list args)
 	int total = 0;
 
 	_printnum(nm);
-	total++;
 	return (total);
 }

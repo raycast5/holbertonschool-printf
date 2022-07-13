@@ -12,7 +12,9 @@ int main(void)
     int len = 0;
     int len2 = 0;
 
-    _printf("Length:[%d, %i]\n", 25, 25,len, len);
-    printf("Length:[%d, %i]\n", 25, 25,len2, len2);
-	return (0);
+    _printf("Length:[%d, %i]\n", 100, 100, len, len);
+    printf("Length:[%d, %i]\n", 100, 100, len2, len2);
+    _printf("Len:[%d]\n", 100, len);
+    printf("Len:[%d]\n", 100, len2);
+    return (0);
 }
