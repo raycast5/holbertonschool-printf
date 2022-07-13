@@ -28,6 +28,11 @@ int _putstr(va_list args);
 
 int _printc(va_list args);
 
+<<<<<<< HEAD
+=======
+int _printpc(__attribute__((unused)) va_list args);
+
+>>>>>>> 004144b5c540f1d38bfa136b2fc1b61e8d0b31e6
 int _strlen(char *s);
 
 int print_i(va_list args);
