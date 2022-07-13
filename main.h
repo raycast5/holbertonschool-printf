@@ -28,9 +28,11 @@ int _putstr(va_list args);
 
 int _printc(va_list args);
 
-
 int _strlen(char *s);
 
+int print_i(va_list args);
+
+void _printnum(int n);
 
 int _printf(const char *const format, ...);
 #endif
