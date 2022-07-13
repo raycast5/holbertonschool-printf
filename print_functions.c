@@ -78,6 +78,7 @@ int _printnum(va_list args)
 		x[i] = (n % 10 + '0');
 		n /= 10;
 	}
+	x[i] = (n % 10 + '0');
 	for (; i >= 0; i--)
 	{
 		_putchar(x[i]);
