@@ -66,12 +66,13 @@ int _printnum(va_list args)
 	{
 		_putchar('-');
 		count++;
-		n = -n;
+		n = (-(unsigned int)n);
 	}
 	if (n == 0)
 	{
 		_putchar('0');
 		count++;
+		return (count);
 	}
 	for (i = 0; n / 10 != 0; i++)
 	{
