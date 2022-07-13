@@ -16,8 +16,8 @@ int (*matchf(const char sp))(va_list args)
 	{'c', _printc},
 	{'s', _putstr},
 	{'%', _printpc},
-	{'i', print_i},
-	{'d', print_i},
+	{'i', _printnum},
+	{'d', _printnum},
 	{'\0', NULL}
 	};
 

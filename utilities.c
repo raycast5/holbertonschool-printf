@@ -54,20 +54,3 @@ int _putchar(char c)
 	return (write(1, &c, 1));
 }
 
-/**
- * _printnum - print integers
- * @n: integer
- */
-
-void _printnum(int n)
-{
-	if (n < 0)
-	{
-		_putchar('-');
-	}
-	if (n == 0)
-		_putchar('0');
-	if (n / 10 != 0)
-		_printnum(n / 10);
-	_putchar(n % 10 + '0');
-}

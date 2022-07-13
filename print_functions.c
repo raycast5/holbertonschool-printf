@@ -50,3 +50,38 @@ int _printpc(__attribute__((unused)) va_list args)
 	_putchar('%');
 return (1);
 }
+
+/**
+ * _printnum - print integers
+ * @args: integer
+ * Return: count
+ */
+
+int _printnum(va_list args)
+{
+	int n = va_arg(args, int), count = 0;
+	int x[11], i;
+
+	if (n < 0)
+	{
+		_putchar('-');
+		count++;
+		n = -n;
+	}
+	if (n == 0)
+	{
+		_putchar('0');
+		count++;
+	}
+	for (i = 0; n / 10 != 0; i++)
+	{
+		x[i] = (n % 10 + '0');
+		n /= 10;
+	}
+	for (; i >= 0; i--)
+	{
+		_putchar(x[i]);
+		count++;
+	}
+return (count);
+}
