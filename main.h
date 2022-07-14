@@ -32,9 +32,7 @@ int _printpc(__attribute__((unused)) va_list args);
 
 int _strlen(char *s);
 
-int print_i(va_list args);
-
-void _printnum(int n);
+int _printnum(va_list args);
 
 int _printf(const char *const format, ...);
 #endif
