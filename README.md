@@ -32,7 +32,6 @@ This format will use arguments and access variables, to convert into an output. 
 <h1> Files 🗃️ </h1>
 <li>_printf.c: custom printf </li>
 <li> man_3_printf:<//li> custom manual printf </li>
-<li> 1-funcs_di: prints integers </li>
 <li> matchf.c: connects the specifiers with its function </li>
 <li> utilities.c: custom functions as helpers </li>
 <li> main.h: the header file with prototypes </li>
