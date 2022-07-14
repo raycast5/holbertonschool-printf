@@ -2,6 +2,7 @@
 #include "main.h"
 #include <stdarg.h>
 #include <stdlib.h>
+#include <limits.h>
 
 /**
  * _putstr - prints a string.
@@ -60,13 +61,20 @@ return (1);
 int _printnum(va_list args)
 {
 	int n = va_arg(args, int), count = 0;
-	int x[11], i;
+	int x[11], i = 0, flag;
 
-	if (n < 0)
+	if (n < 0 && n != INT_MIN)
 	{
 		_putchar('-');
 		count++;
-		n = (-(unsigned int)n);
+		n = -(n);
+	}
+	else if (n == INT_MIN)
+	{
+		_putchar('-');
+		count++;
+		n = INT_MAX;
+		flag = 1;
 	}
 	if (n == 0)
 	{
@@ -74,12 +82,16 @@ int _printnum(va_list args)
 		count++;
 		return (count);
 	}
-	for (i = 0; n / 10 != 0; i++)
+	for (; n / 10 != 0; i++)
 	{
 		x[i] = (n % 10 + '0');
 		n /= 10;
 	}
 	x[i] = (n % 10 + '0');
+	if (flag == 1)
+	{
+		x[0] = '8';
+	}
 	for (; i >= 0; i--)
 	{
 		_putchar(x[i]);
